@@ -1,105 +1,61 @@
-# ⚙️ Blog Website (Backend API)
+# 📝 Blog Website (MERN Stack)
 
-This is the backend of a full-stack **Blog Website** built using Node.js, Express, and MongoDB. It provides REST APIs for authentication, blog posts, comments, and image uploads.
+A full-stack **Blog Website** built using the MERN stack where users can create, update, and manage blog posts with authentication, comments, and image uploads.
 
 ---
 
 ## 🚀 Features
 
-* 🔐 User Authentication (JWT-based Login & Signup)
+* 🔐 User Authentication (Login / Signup using JWT)
 * ✍️ Create, Update, Delete Blog Posts
-* 💬 Comment System
-* 🖼️ Image Upload using GridFS
-* 🔒 Password Hashing with Bcrypt
-* 🌐 RESTful API Architecture
+* 💬 Comment System on Posts
+* 🗂️ Category-based Filtering
+* 🖼️ Image Upload (Multer + GridFS)
+* 📱 Responsive UI using Material UI
+* ⚡ RESTful API Integration
 
 ---
 
 ## 🛠️ Tech Stack
 
-* **Node.js**
-* **Express.js**
-* **MongoDB (Mongoose)**
-* **JWT (jsonwebtoken)** for authentication
-* **Bcrypt** for password hashing
-* **Multer + GridFS** for file uploads
-* **CORS & Body-Parser**
+### 🌐 Frontend
+
+* React (v17)
+* React Router DOM (v6)
+* Material UI (MUI)
+* Axios
+
+### ⚙️ Backend
+
+* Node.js
+* Express.js
+* MongoDB (Mongoose)
+* JWT Authentication
+* Bcrypt (Password Hashing)
+* Multer + GridFS (File Uploads)
 
 ---
 
 ## 📁 Project Structure
 
-```id="f7n2kd"
-server/
- ├── controller/
- ├── routes/
- ├── model/
- ├── database/
- ├── utils/
- ├── index.js
- ├── package.json
+```id="y72nq8"
+BLOG_WEBSITE/
+ ├── client/    # React frontend
+ ├── server/    # Node.js backend
 ```
 
 ---
 
 ## ⚙️ Setup Instructions
 
-### 1️⃣ Install Dependencies
+### 1️⃣ Clone Repository
 
-```bash id="0z0qtw"
-npm install
+```bash id="lqj3pz"
+git clone https://github.com/Saifurrahman21/BLOG_WEBSITE.git
+cd BLOG_WEBSITE
 ```
 
 ---
-
-### 2️⃣ Create `.env` File
-
-Create a `.env` file inside the `server/` folder:
-
-```env id="q3g1o6"
-CONNECTION_URL=your_mongodb_connection_string
-PORT=5000
-JWT_SECRET=your_secret_key
-```
-
----
-
-### 3️⃣ Run the Server
-
-```bash id="c3e4tp"
-npm start
-```
-
-👉 Server will run on:
-
-```id="u6l9vm"
-http://localhost:5000
-```
-
----
-
-## 🔗 API Endpoints (Example)
-
-| Method | Endpoint    | Description       |
-| ------ | ----------- | ----------------- |
-| POST   | /signup     | Register new user |
-| POST   | /login      | User login        |
-| GET    | /posts      | Get all posts     |
-| POST   | /create     | Create new post   |
-| PUT    | /update/:id | Update post       |
-| DELETE | /delete/:id | Delete post       |
-
----
-
-## 🖼️ File Upload
-
-* Uses **Multer + GridFS**
-* Images are stored directly in MongoDB
-* Supports large file uploads
-
----
-
-## ⚠️ Important Notes
 
 ## 🗄️ Database Setup
 
@@ -112,7 +68,7 @@ You can use either **MongoDB Atlas (Cloud)** or **Local MongoDB**.
 3. Allow IP: `0.0.0.0/0`
 4. Copy connection string
 
-```env
+```env id="4hhkdx"
 CONNECTION_URL=mongodb+srv://username:password@cluster.mongodb.net/blogify?retryWrites=true&w=majority
 ```
 
@@ -123,60 +79,132 @@ CONNECTION_URL=mongodb+srv://username:password@cluster.mongodb.net/blogify?retry
 1. Install MongoDB locally
 2. Start MongoDB server
 
-```bash
+```bash id="3yjj3r"
 mongod
 ```
 
-3. Use local connection string:
+3. Use connection string:
 
-```env
+```env id="m3t6dr"
 CONNECTION_URL=mongodb://localhost:27017/blogify
 ```
 
 ---
 
-👉 Make sure to update your `.env` file accordingly.
+## 🔧 Backend Setup
 
+```bash id="h3zq3l"
+cd server
+npm install
+```
+
+Create `.env` file:
+
+```env id="y1c8he"
+CONNECTION_URL=your_database_url
+PORT=5000
+JWT_SECRET=your_secret_key
+```
+
+Run backend:
+
+```bash id="v2c9h1"
+npm start
+```
+
+👉 Server runs at:
+
+```id="px0q0z"
+http://localhost:5000
+```
+
+---
+
+## 🌐 Frontend Setup
+
+```bash id="k8sx5n"
+cd client
+npm install
+npm start
+```
+
+👉 App runs at:
+
+```id="rj3k2s"
+http://localhost:3000
+```
+
+---
+
+## 🔗 API Integration
+
+Frontend communicates with backend APIs using Axios.
+
+👉 Default API Base URL:
+
+```id="9y8d6x"
+http://localhost:5000
+```
 
 ---
 
 ## 🔒 Environment Variables
 
-Example:
+### Backend `.env`
 
-```env id="6z3w8p"
-CONNECTION_URL=mongodb+srv://username:password@cluster.mongodb.net/blogify
+```env id="2l1o0w"
+CONNECTION_URL=your_mongodb_url
 JWT_SECRET=your_secret
 PORT=5000
 ```
 
 ---
 
-## 🧪 Testing APIs
+## 🧪 Testing
 
-Use tools like:
+Use:
 
 * Postman
-* Thunder Client (VS Code)
+* Thunder Client
+
+to test API endpoints.
 
 ---
 
 ## 🚀 Deployment
 
-* Backend can be deployed on:
+* Frontend: Vercel / Netlify
+* Backend: Render / Railway
+* Database: MongoDB Atlas
 
-  * Render
-  * Railway
-  * Cyclic
+---
+
+## 📸 Screenshots
+
+*Add screenshots of your UI here (Home, Login, Create Post, etc.)*
+
+---
+
+## 🧠 Learning Outcomes
+
+* Full MERN Stack Development
+* REST API Design
+* Authentication using JWT
+* MongoDB Integration
+* Image Upload using GridFS
+* State Management with React
 
 ---
 
 ## 👨‍💻 Author
 
 **Saifurrahman Khan**
-GitHub: https://github.com/Saifurrahman21
-LinkedIn: https://www.linkedin.com/in/saifurrahman-490a54292
+
+* GitHub: https://github.com/Saifurrahman21
+* LinkedIn: https://www.linkedin.com/in/saifurrahman-490a54292
 
 ---
 
-⭐ If you like this project, give it a star!
+## ⭐ Support
+
+If you like this project, please give it a ⭐ on GitHub!
