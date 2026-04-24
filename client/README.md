@@ -1,70 +1,110 @@
-# Getting Started with Create React App
+# 📝 Blog Website (Frontend)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the frontend of a full-stack **Blog Website** built using React. It provides a clean UI for users to create, read, update, and delete blog posts with authentication and comments support.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+* 🔐 User Login & Signup UI
+* 🏠 Home page with blog posts
+* 📝 Create & Update blog posts
+* 📄 Detailed post view with comments
+* 🗂️ Category-based filtering
+* 📱 Responsive design using Material UI
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 🛠️ Tech Stack
 
-### `npm test`
+* **React** (v17.0.2)
+* **React Router DOM** (v6.3.0)
+* **Material UI (MUI)** for UI components
+* **Axios** for API calls
+* **Emotion** for styling
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 📁 Project Structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```id="3l9r2s"
+client/
+ ├── src/
+ │   ├── components/
+ │   ├── context/
+ │   ├── service/
+ │   ├── constants/
+ │   ├── utils/
+ │   ├── App.js
+ │   └── index.js
+ ├── public/
+ └── package.json
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## ⚙️ Setup Instructions
 
-### `npm run eject`
+### 1️⃣ Install Dependencies
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```bash id="d1fj8p"
+npm install
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### 2️⃣ Run the App
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```bash id="n7zv2l"
+npm start
+```
 
-## Learn More
+👉 App will run on:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```id="5m5c5c"
+http://localhost:3000
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## 🔗 Backend Connection
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+This frontend connects to a backend API (Node.js + Express).
 
-### Analyzing the Bundle Size
+👉 Make sure backend is running at:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```id="g7k9z2"
+http://localhost:5000
+```
 
-### Making a Progressive Web App
+👉 API calls are handled using Axios (inside `src/service/api.js`)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## ⚠️ Important Notes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+* Ensure backend server is running before starting frontend
+* Update API base URL if backend is deployed
+* Works best with Node.js v16 or v18 (avoid Node v24 issues)
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 📦 Available Scripts
 
-### `npm run build` fails to minify
+```bash id="2i8o2n"
+npm start     # Runs app in development mode
+npm build     # Builds app for production
+npm test      # Runs tests
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+## 👨‍💻 Author
+
+**Saifurrahman Khan**
+GitHub: https://github.com/Saifurrahman21
+LinkedIn: https://www.linkedin.com/in/saifurrahman-490a54292
+
+---
+
+⭐ If you like this project, give it a star!
